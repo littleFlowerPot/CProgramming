@@ -14,16 +14,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "07_02Exercise.h"
-
-
-//prototypes declarations
-void initializeAccount();
-void getBalance(void);
-void askCustomer(void);
-void updateAccount(float value);
-void addGift(float giftAmount);
-void thankYou(void);
+#include "../Header/07_02Exercise.h"
 
 int main(void) {
 	initializeAccount();
