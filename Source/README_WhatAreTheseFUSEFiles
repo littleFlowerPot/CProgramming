@@ -1,0 +1,13 @@
+
+These .fuse files were created when I did rm .*swp to get rid of the .swp files.
+There are now heaps of them, but I can only see and remove two at a time with
+ls -la to view, and rm -rf .* to delete.
+
+By the way, it should be noted that the timestamp of these fuse files seem to be around the
+time of compilation of the the source files (I compiled with GCC the 0702FunctionsDefn and
+the ProjectCopy.c, and a hidden swp file for FunctionsDefn was made.
+
+SOLTUION found: This is to do with vim holding the files in use (somehow, or being referred to) and the files being on a NTFS/NFS files system apparentely.
+
+Use "lsof /path/to/file/ to see what process is holding on to them...and closing vi
+removed them straight away without any required command.

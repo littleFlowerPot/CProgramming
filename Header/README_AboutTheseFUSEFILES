@@ -1,0 +1,11 @@
+See the ../Sources folder with a readme explaining what these fuse files are.
+
+The difference here, is that all I did was delete the one visable hidden swp file, and 
+then this fuse file appeared in ls -la. The time stamp suggests it was at compilation of
+the header (or precompilation in this case, as we are dealing with a header). GCC was
+the compiler.
+
+SOLTUION found: This is to do with vim holding the files in use (somehow, or being referred to) and the files being on a NTFS/NFS files system apparentely.
+
+Use "lsof /path/to/file/ to see what process is holding on to them...and closing vi
+removed them straight away without any required command.
