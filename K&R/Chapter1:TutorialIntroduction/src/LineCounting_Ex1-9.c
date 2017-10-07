@@ -3,25 +3,36 @@
 /* Exercise 1-9 */
 main ()
 {
-    int c, bl, nl, tb;
+    int c, bl;
     
     bl = 0;
-    nl = 0;
+    
     while ((c = getchar()) != EOF)
     {
-        if (c == ' ')
-            ++bl;
-        if (bl == 1
-        if (c != ' ')
-            putchar(c);
+        /* Deals with tab - sets the input char to be a blank */
+        if (c == '\t')
+            c = ' '; 
 
+        if (c == ' ')
+        {
+            ++bl;
+            if (bl >= 2)
+                ;
+            if (bl < 2)
+                putchar(c);
+        }
+
+        if (c != ' ')
+        {
+            putchar(c);
+            bl = 0;
+        }
     }
 
 
 
 
 }
-
 
 
 
