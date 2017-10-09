@@ -38,8 +38,9 @@ main()
     }
     
     /* We have reached end of file. Lets print out the number of lines, words, and characters in the input. Note number of characters will include newline, tabs and blanks */ 
-    printf("%d %d %d\n", nl, nw, nc);
-
+    printf("%s %d\n %s %d\n %s %d\n", "-number of lines is: ", nl, "-number of words is: ", nw, "-number of characters is: ", nc);
+    
+    /* Observation and question: Why does dash (in printf above) NOT need an escape? In fact writing \- will result in a "non-valid escape sequence" on gcc -ansi */
 
 
 
