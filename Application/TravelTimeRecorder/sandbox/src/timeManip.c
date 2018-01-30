@@ -1,0 +1,40 @@
+/*Playing around with the time manipulation in C*/
+/* http://geekcoderz.blogspot.com.au/2014/08/C-Program-to-Calculat-Difference-Between-Two-Time-Period.html
+ * Thanks to a (unamed user) who posted the original source on hte site above. I do not know if they had got it
+ * from somewhere else also. The version modified below are my own modifications based on my needs, and they also
+ * double up as a good way to learn more C coding */
+
+#include <stdio.h>
+struct time{
+  int minutes;
+  int hours;
+};
+
+void Difference(struct time t1, struct time t2, struct time *diff);
+int main(){
+    struct time t1,t2,diff;
+    printf("Enter start time: \n");
+    printf("Enter hours, minutes and seconds respectively: ");
+    scanf("%d%d%d",&t1.hours,&t1.minutes,&t1.seconds);
+    printf("Enter stop time: \n");
+    printf("Enter hours, minutes and seconds respectively: ");
+    scanf("%d%d%d",&t2.hours,&t2.minutes,&t2.seconds);
+    Difference(t1,t2,&diff);
+    printf("\ntime DIFFERENCE: %d:%d:%d - ",t1.hours,t1.minutes,t1.seconds);
+    printf("%d:%d:%d ",t2.hours,t2.minutes,t2.seconds);
+    printf("= %d:%d:%d\n",diff.hours,diff.minutes,diff.seconds);
+    return 0;
+}
+void Difference(struct time t1, struct time t2, struct time *differ){
+    if(t2.seconds>t1.seconds){
+       --t1.minutes;
+        t1.seconds+=60;
+					    }
+	    differ->seconds=t1.seconds-t2.seconds;
+	    if(t2.minutes>t1.minutes){
+        --t1.hours;
+        t1.minutes+=60;
+				    }
+	    differ->minutes=t1.minutes-t2.minutes;
+	    differ->hours=t1.hours-t2.hours;
+}
