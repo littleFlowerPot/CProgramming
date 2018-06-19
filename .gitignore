@@ -1,0 +1,5 @@
+Exectutable
+*.out
+*.bin
+*.*~
+*.o
