@@ -1,6 +1,6 @@
 # CProgramming
 
-C language practice, play and projects
+C language practice, play and projects.
 
 * [K&R exercises and notes](https://github.com/przet/CProgramming/tree/master/K%26R)
 * [Lynda C video course (Artzi) exercises etc](https://github.com/przet/CProgramming/tree/master/Source)
