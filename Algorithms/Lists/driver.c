@@ -15,6 +15,6 @@ int main(){
         node4.next = NULL;
 
         head = &node1;
-        printf("\n%d\n", printElement(head, 3));
+        printf("\n%d\n", printElement(head, 6));
         return 0;
 }
