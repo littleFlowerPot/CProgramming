@@ -3,7 +3,7 @@
 int printElement(struct ListNode*, int);
 
 int main(){
-        struct ListNode* head;
+        struct ListNode* head, *no_head;
         struct ListNode node1, node2,node3,node4;
         node1.val = 1;
         node1.next = &node2;
@@ -15,6 +15,9 @@ int main(){
         node4.next = NULL;
 
         head = &node1;
-        printf("\n%d\n", printElement(head, 6));
+        printf("\n%d\n", printElement(head, 1));
+        printf("\n%d\n", printElement(no_head, 1));
+
+        
         return 0;
 }
