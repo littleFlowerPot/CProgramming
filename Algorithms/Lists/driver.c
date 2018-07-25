@@ -1,8 +1,8 @@
 #include "ListNode.h"
 #include <stdio.h>
-int printElement(struct ListNode*, int);
+int getElement(struct ListNode*, int);
 
-int main(){
+int main(){ /*TODO: cl args to take in list and index */
         struct ListNode* head, *no_head;
         struct ListNode node1, node2,node3,node4;
         node1.val = 1;
@@ -15,8 +15,8 @@ int main(){
         node4.next = NULL;
 
         head = &node1;
-        printf("\n%d\n", printElement(head, 1));
-        printf("\n%d\n", printElement(no_head, 1));
+        printf("\n%d\n", getElement(head, 1));
+        printf("\n%d\n", getElement(no_head, 1));
 
         
         return 0;

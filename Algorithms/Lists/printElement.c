@@ -16,7 +16,7 @@ int listLength(struct ListNode* head){
                 return 1 + listLength(head->next);
 }
 
-int printElement(struct ListNode* head, int i){
+int getElement(struct ListNode* head, int i){
         if (!head){
                 printf("ERROR: List is empty");
                 return -1;
@@ -31,7 +31,7 @@ int printElement(struct ListNode* head, int i){
         if (i == 0)
                 return head->val;
         else
-                printElement(head->next, i-1);
+                getElement(head->next, i-1);
 }
 
                 
