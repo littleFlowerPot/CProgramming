@@ -15,6 +15,7 @@ int main(){ /*TODO: cl args to take in list and index */
         node4.next = NULL;
 
         head = &node1;
+        no_head = NULL;
         printf("\n%d\n", getElement(head, 1));
         printf("\n%d\n", getElement(no_head, 1));
 
