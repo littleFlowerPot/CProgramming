@@ -51,6 +51,15 @@ struct ListNode* getNode(struct ListNode* head, int i){
         else
                 getElement(head->next, i-1);
 }
+
+void deleteNode(struct ListNode* node){
+        if (!node->val)
+                node = NULL;
+        else{
+                node->val = node->next->val;
+                node->next = node->next->next;
+        }
+}
         
 
                 

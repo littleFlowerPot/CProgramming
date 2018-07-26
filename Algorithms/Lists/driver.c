@@ -2,6 +2,7 @@
 #include <stdio.h>
 int getElement(struct ListNode*, int);
 struct ListNode* getNode(struct ListNode*, int);
+void deleteNode(struct ListNode*);
 
 int main(){ /*TODO: cl args to take in list and index */
         struct ListNode* head, *no_head;
@@ -16,10 +17,14 @@ int main(){ /*TODO: cl args to take in list and index */
         node4.next = NULL;
 
         head = &node1;
-        no_head = NULL;
+        /*no_head = NULL;
         printf("\n%d\n", getElement(head, 1));
         printf("\n%d\n", getElement(no_head, 1));
-        printf("\n%d\n",getNode(head,1)->val);
+        printf("\n%d\n",getNode(head,1)->val);*/
+        deleteNode(&node2);
+        printf("\n%d\n",(node1.next->val));
+        /*printf("\n%d\n",getNode(head,1)->val);*/
+
         
 
         
