@@ -49,7 +49,8 @@ struct ListNode* getNode(struct ListNode* head, int i){
         if (i == 0)
                 return head;
         else
-                getElement(head->next, i-1);
+                /*getElement(head->next, i-1);*/
+                getNode(head->next, i-1);
 }
 
 void deleteNode(struct ListNode* node){
