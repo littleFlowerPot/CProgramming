@@ -3,3 +3,7 @@ Exectutable
 *.bin
 *.*~
 *.o
+
+#Vim
+*.*~
+*.*.swp
