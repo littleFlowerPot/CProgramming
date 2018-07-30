@@ -1,9 +1,6 @@
 #include "ListNode.h"
+#include "listOperations.h"
 #include <stdio.h>
-int getElement(struct ListNode*, int);
-struct ListNode* getNode(struct ListNode*, int);
-void deleteNode(struct ListNode*);
-void printList(struct ListNode*);
 
 int main(){ /*TODO: cl args to take in list and index */
         struct ListNode* head, *no_head;
