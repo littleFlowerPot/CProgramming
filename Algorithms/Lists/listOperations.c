@@ -4,6 +4,7 @@
 
 /* Current Assumptions:
  * - List is at least size 1
+ * - List has integer data
  */
 
 
