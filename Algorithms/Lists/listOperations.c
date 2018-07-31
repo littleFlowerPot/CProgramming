@@ -55,12 +55,25 @@ struct ListNode* getNode(struct ListNode* head, int i){
 }
 
 void deleteNode(struct ListNode* node){
-        if (!node->val)
+        if (!node->next)
                 node = NULL;
         else{
                 node->val = node->next->val;
                 node->next = node->next->next;
         }
+}
+
+struct ListNode* deleteNthNodeFromStart(struct ListNode* head, int n){
+        if(!head->next)
+                /*Won't matter what n is */
+                return head = NULL;
+        else if (n == 1){
+                head->val = head->next->val;
+                head->next = head->next->next;
+                return head;
+        }
+        else
+                deleteNthNodeFromStart(head->next,n-1);
 }
         
 

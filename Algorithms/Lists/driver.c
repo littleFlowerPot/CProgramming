@@ -1,5 +1,6 @@
 #include "ListNode.h"
 #include "listOperations.h"
+#include "printList.h"
 #include <stdio.h>
 
 int main(){ /*TODO: cl args to take in list and index */
@@ -23,16 +24,26 @@ int main(){ /*TODO: cl args to take in list and index */
         printf("\n%d\n", getElement(head, 1));
         printf("\n%d\n", getElement(no_head, 1));
         printf("\n%d\n",getNode(head,1)->val);
-        deleteNode(&node2);
+        deleteNode(&node3);
         printList(head);
         printf("\n%d\n",(node1.next->val));
         printf("\n%d\n",getElement(head,1));
 
+        deleteNthNodeFromStart(head,1);
         printf("\n");
         printList(head);
         printf("\n");
         
-        printf("\n%d\n",getElement(head,2));
+        deleteNthNodeFromStart(head,1);
+        printf("\n");
+        printList(head);
+        printf("\n");
+
+        deleteNthNodeFromStart(head,1);
+        printf("\n");
+        printList(head);
+        printf("\n");
+
 
         
         return 0;
