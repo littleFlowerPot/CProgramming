@@ -65,13 +65,11 @@ void deleteNode(struct ListNode* node){
 
 struct ListNode* deleteNthNodeFromStart(struct ListNode* head, int n){
         if (n == 1){
-                printf("If statement executing..");
                 head->val = head->next->val;
                 head->next = head->next->next;
                 return head;
         }
-        else if(!head->next->next){
-                /*Won't matter what n is */
+        if(!head->next->next){
                 head->next = NULL;
                 return head;
         }
