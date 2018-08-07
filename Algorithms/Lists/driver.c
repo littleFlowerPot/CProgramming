@@ -61,10 +61,10 @@ int main(int argc, char** argv){
         printList(head);
         printf("\n");
 
-        struct ListNode* return_node = deleteNthNodeFromStart(head,element_to_delete);
+        struct ListNode* return_node = deleteFirst_N_Nodes(head,element_to_delete);
         printf("%d\n%d", node2.val,node2.next->val);
 
-        printf("Return value(the data in the value) from function 'deleteNthNodeFromStart(...)' is:\n");
+        printf("Return value(the data in the value) from function 'deleteFirst_N_Nodes(...)' is:\n");
         printf("%d", return_node->val);
 
         printf("%s%d%s","\nList after deletion of ", element_to_delete,"st/th list element\n\n");
@@ -74,12 +74,12 @@ int main(int argc, char** argv){
 
         
         /*
-        deleteNthNodeFromStart(head,1);
+        deleteFirst_N_Nodes(head,1);
         printf("\n");
         printList(head);
         printf("\n");
 
-        deleteNthNodeFromStart(head,1);
+        deleteFirst_N_Nodes(head,1);
         printf("\n");
         printList(head);
         printf("\n");

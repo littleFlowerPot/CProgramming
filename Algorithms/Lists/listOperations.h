@@ -8,7 +8,7 @@ int listLength(struct ListNode* head);
 int getElement(struct ListNode* head, int i);
 struct ListNode* getNode(struct ListNode* head, int i);
 void deleteNode(struct ListNode* node);
-struct ListNode* deleteNthNodeFromStart(struct ListNode* head, int n);
+struct ListNode* deleteFirst_N_Nodes(struct ListNode* head, int n);
         
 
                 
