@@ -77,6 +77,16 @@ struct ListNode* deleteFirst_N_Nodes(struct ListNode* head, int n){
                 deleteFirst_N_Nodes(head->next,n-1);
 }
         
+struct ListNode* deleteNthNode(struct ListNode* head, int n){
+        if (n == 1){
+                struct ListNode* temp_head = head;
+                head = temp_head->next;
+                return head;
+        }
+
+        head->next = deleteNthNode(head->next,n-1);
+        return head;
+}
 
                 
         
