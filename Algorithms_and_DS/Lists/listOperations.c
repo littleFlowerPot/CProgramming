@@ -88,5 +88,22 @@ struct ListNode* deleteNthNode(struct ListNode* head, int n){
         return head;
 }
 
+struct ListNode* reverseList(struct ListNode* head){
+        if(!head)
+        return NULL;
+    	int n = listLength(head);
+    	struct ListNode* A[n];
+    	struct ListNode* temp_head = head; 
+    	for(int i = 0; i<=n-1; ++i){
+        	A[i] = temp_head;
+        	temp_head = temp_head->next;
+    	}
+    	for(int i = n-1; i>=1; --i)
+        	A[i]->next = A[i-1];
+    	A[0]->next = NULL;
+    	head=A[n-1];
+    	return head;
+}
+
                 
         

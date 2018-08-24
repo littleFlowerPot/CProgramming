@@ -10,6 +10,7 @@ struct ListNode* getNode(struct ListNode* head, int i);
 void deleteNode(struct ListNode* node);
 struct ListNode* deleteFirst_N_Nodes(struct ListNode* head, int n);
 struct ListNode* deleteNthNode(struct ListNode* head, int n);
+struct ListNode* reverseList(struct ListNode* head);
         
 
                 
